@@ -1,6 +1,6 @@
 import React from 'react';
 import './CountriesCard.css';
-// import { useState, useEffect } from 'react';
+// import getCountries from '../services/countries';
 
 export default function CountriesCard({ name }) {
   return (
@@ -8,9 +8,10 @@ export default function CountriesCard({ name }) {
       <div className="details">
         <div className="name">{name}</div>
       </div>
-      {/* <div className="image">
-        <img src={iso2} /> */}
+      <div className="image">
+        {/* <img src={'https://flagcdn.com/20x15/png'} /> */}
+        <img src={'https://flagcdn.com/24x18/${countries.iso2.toLowerCase()}.png'} />
+      </div>
     </div>
-    // </div>
   );
 }

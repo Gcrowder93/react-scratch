@@ -17,14 +17,12 @@ function App() {
     fetchData();
   }, []);
 
-  function filterCountries() {
-    return countries.filter((countries) => {
-      return (
-        countries.name.includes(query) &&
-        (countries.continent === continent || continent === 'Choose')
-      );
-    });
-  }
+  const filterCountries = countries.filter(
+    (countries) =>
+      countries.name.includes(query) &&
+      (countries.continent === continent || continent === 'Choose')
+  );
+
   return (
     <section className="main">
       <Header />
@@ -47,7 +45,7 @@ function App() {
         <option value="South America">South America</option>
       </select>
 
-      {filterCountries().map((countries) => (
+      {filterCountries.map((countries) => (
         <CountriesCard key={countries.name} {...countries} />
       ))}
       <Footer />
