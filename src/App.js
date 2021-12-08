@@ -34,7 +34,8 @@ function App() {
           setQuery(e.target.value);
         }}
       />
-      <select value={continent} onChange={(e) => setContinent(e.target.value)}>
+
+      <select className="select" value={continent} onChange={(e) => setContinent(e.target.value)}>
         <option value="Choose">Choose</option>
         <option value="Africa">Africa</option>
         <option value="Asia">Asia</option>
@@ -44,7 +45,6 @@ function App() {
         <option value="Oceania">Oceania</option>
         <option value="South America">South America</option>
       </select>
-
       {filterCountries.map((countries) => (
         <CountriesCard key={countries.name} {...countries} />
       ))}
