@@ -1,6 +1,5 @@
 import React from 'react';
 import './CountriesCard.css';
-// import getCountries from '../services/countries';
 
 export default function CountriesCard({ name, iso2 }) {
   return (
@@ -10,7 +9,6 @@ export default function CountriesCard({ name, iso2 }) {
       </div>
       <div className="image">
         <img src={`https://flagcdn.com/16x12/${iso2.toLowerCase()}.png`} />
-        {/* <img src={'https://flagcdn.com/24x18/${countries.iso2.toLowerCase()}.png'} /> */}
       </div>
     </div>
   );
