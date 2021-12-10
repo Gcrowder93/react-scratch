@@ -1,4 +1,5 @@
 import './App.css';
+import './components/CountriesCard.css';
 import Header from './components/layout/Header/Header';
 import Footer from './components/layout/Footer/Footer';
 import CountriesCard from '../src/components/CountriesCard';
@@ -19,10 +20,10 @@ function App() {
 
   const filterCountries = countries.filter(
     (countries) =>
-      countries.name.includes(query) &&
-      (countries.continent === continent || continent === 'Choose')
+      countries.name.toLowerCase().includes(query) ||
+      (countries.name.toUpperCase().includes(query) &&
+        (countries.continent === continent || continent === 'Choose'))
   );
-
   return (
     <section className="main">
       <div className="App">
