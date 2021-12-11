@@ -6,8 +6,19 @@ body {
 .box {
   margin: 10px;
   padding: 20px;
-  border: 2px solid salmon;
+  border: 2px solid black;
   box-sizing: border-box;
+}
+
+.button {
+  height: 30px;
+  width: 175px;
+  color: black;
+}
+
+.dropdown {
+  height: 30px;
+  width: 75px;
 }
 
 .loader {
